@@ -6,10 +6,10 @@ public class NumeroParImpar {
         int numero;
 		
 		System.out.println("Leer numero: ");
-		Scanner in = new Scanner(System.in);
-        numero = in.nextInt();
-		// sout
-        
+		try (Scanner in = new Scanner(System.in)) {
+			numero = in.nextInt();
+			// sout
+		}
         if(numero%2==0) {
 			System.out.println("El numero " + numero + " es par");
 		} else {
